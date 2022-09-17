@@ -1,0 +1,27 @@
+import java.util.*; 
+import java.io.*; 
+
+class Ex4 { 
+public static void main(string[] args){ 
+try{ 
+FileInputStream fin=new  
+FileInputStream("C:\Users\pooja\Documents\5th sem\Alphabet.txt"); 
+FileOutputStream fout=new FileOutputStream("C:\Users\pooja\Documents\5th sem\consonant.txt"); 
+int ch; 
+while(ch=fin.read()!=-1){ 
+if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){ 
+throw new vowelNotAllowedException(); 
+} 
+else 
+fout.write(ch); 
+} 
+}catch(vowelNotAllowedException e){ 
+System.out.println(e.toString()); 
+} 
+}
+} 
+class vowelNotAllowedException extends Exception{ 
+public String toString(){ 
+return "vowels are not allowed"; 
+} 
+} 
