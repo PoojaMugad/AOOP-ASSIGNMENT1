@@ -1,3 +1,11 @@
+//Write a Java program to implement the following scenario: 
+a) Create a file named Integers.txt and insert n-random integers into it.
+b) Create three threads T1, T2 and T3 that read n/3 integers in sequence of occurrenceof  numbers from the file and sort the read n/3 integers. 
+c) Thread T4 waits for all the threads T1, T2 and T3 to complete sorting, then sorts and outputs the entire list of sorted numbers to another file named SortedIntegers.txt
+
+
+
+
 import java.io.File; 
 import java.io.FileNotFoundException; 
 import java.io.FileWriter; 
